@@ -1,0 +1,22 @@
+.cards-conteiner{
+    border-radius: 10px;
+    border: 1px solid black;
+}
+
+.todo-card{
+    display: flex;
+    flex-direction: row;
+    gap: 1px;
+}
+
+.todo-card:nth-child(odd){
+    background-color: rgba(166,204,217,255);
+}
+
+.todo-card:nth-child(even){
+    background-color: rgba(226,226,226,255);
+}
+
+.todo-card:nth-child(3n){
+    background-color: rgba(157,194,206,255);
+}

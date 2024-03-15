@@ -1,0 +1,5 @@
+<div class="todo-card">
+    <input type="checkbox" name="myCheckbox" value={{task.status}}>
+    <span>{{task.description}}</span>
+    <span>{{(task.date | date:'longDate') ?? "no data"}}</span>
+</div>
