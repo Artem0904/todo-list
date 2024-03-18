@@ -3,20 +3,20 @@
     border: 1px solid black;
 }
 
-.todo-card{
+div{
     display: flex;
     flex-direction: row;
     gap: 1px;
 }
-
-.todo-card:nth-child(odd){
-    background-color: rgba(166,204,217,255);
-}
-
-.todo-card:nth-child(even){
+div:nth-child(even){
     background-color: rgba(226,226,226,255);
 }
 
-.todo-card:nth-child(3n){
+div:nth-child(odd){
+    background-color: rgba(166,204,217,255);
+} 
+
+
+div:nth-child(3n){
     background-color: rgba(157,194,206,255);
 }

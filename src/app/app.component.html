@@ -1,5 +1,6 @@
 <div class="cards-conteiner">
   @for (i of tasks; track i.id) {
-    <app-todo-list [task]="i"></app-todo-list>
+    <app-todo-list (removeEvent)="removeTask($event)" [task]="i"></app-todo-list>
   }
+  <app-add-task (submitEvent)="createTask($event)"></app-add-task>
 </div>

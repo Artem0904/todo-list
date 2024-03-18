@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { ITask } from '../task';
 import { DatePipe, LowerCasePipe, UpperCasePipe } from '@angular/common';
 
@@ -17,8 +17,12 @@ export class TodoListComponent {
     status: false
   };
 
-  changeRole(): void {
+  @Output() removeEvent = new EventEmitter<number>();
+
+  changeStatus(): void {
     this.task.status = !this.task.status;
   }
-
+  remove(): void {
+    this.removeEvent.emit(this.task.id);
+  }
 }
