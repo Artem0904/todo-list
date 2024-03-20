@@ -1,5 +1,8 @@
-<div (dblclick)="remove()">
-    <input type="checkbox" name="myCheckbox" value={{task.status}} (click)="changeStatus()">
-    <span>{{task.description}}</span>
-    <span>{{(task.date | date:'longDate') ?? "no data"}}</span>
+<div>
+    <div>
+        <input type="checkbox" name="myCheckbox" formControlName="status" (click)="changeStatus()">
+        <span>{{task.description}}</span>
+        <span>{{(task.date | date:'longDate') ?? "no data"}}</span>
+    </div>
+    <button (click)="remove()">Delete</button>
 </div>
